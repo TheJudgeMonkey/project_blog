@@ -1,27 +1,21 @@
-<%= form_with(model: article) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-        <% article.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+<div class="container shadow p-3 rounded-3">
+  <%= form_with(model: article) do |form| %>
+    <%= render 'shared/errors' %> 
+    <form>
+      <div class="mb-3">
+        <%= form.label :title, class: "form-label" %>
+        <%= form.text_field :title, class: "form-control"%>
+        <div id="help" class="form-text">Length must be more than 6 characters and less than 100</div>
+      </div>
+      <div class="mb-3">
+        <%= form.label :description, class: "form-label" %>
+        <%= form.text_area :description, class: "form-control", rows: "4"%>
+        <div id="help" class="form-text">Length must be more than 10 characters and less than 500</div>
+      </div>
+      <div class="actions">
+        <%= form.submit class: "btn btn-primary"%>
+      </div>
+    </form> 
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  <%= link_to 'Back', articles_path %>
+</div>

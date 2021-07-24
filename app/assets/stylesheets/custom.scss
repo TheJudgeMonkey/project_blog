@@ -1,0 +1,52 @@
+.bg-color {
+  background: linear-gradient(45deg, rgb(217, 223, 230), rgb(239, 245, 253))!important;
+  background-size: 100%!important;
+}
+
+.nav-color{
+  background-color: rgb(201, 208, 216)!important;
+}
+
+.nav-link {
+  color: aliceblue!important;
+  height: 50px;
+  font-size: 1.2em;
+  line-height: 36px!important;
+}
+
+#logo {
+  color: white;
+  font-size: 1.7em;
+  margin: 0 40px;
+  font-weight: bold; 
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(201, 208, 216);
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.card {
+  margin: 20px auto;
+  max-width: 700px!important;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(45deg, rgb(217, 223, 230), rgb(239, 245, 253))!important;
+  background-attachment: fixed!important;
+}
+
+.container {
+  background-color: rgba(201, 208, 216, 0.418)!important;
+}
+
+.card-text {
+  white-space: pre-line;
+}
