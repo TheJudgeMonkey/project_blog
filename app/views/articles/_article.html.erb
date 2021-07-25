@@ -20,7 +20,9 @@
     <div class="card-footer text-muted fs-6 bg-light bg-gradient">
       Created <%= time_ago_in_words(article.created_at) %> ago, edited <%= time_ago_in_words(article.updated_at) %> ago 
       <span class="fst-italic">
-        by <%= article.user.username if article.user %>
+        <% if article.user %>
+          by <%= link_to article.user.username, user_path(article.user), class:  "text-decoration-none text-dark" %>
+        <% end %>
       </span>
     </div>
   </div>
