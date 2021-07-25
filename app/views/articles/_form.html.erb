@@ -1,6 +1,6 @@
-<div class="container shadow p-3 rounded-3">
-  <%= form_with(model: article) do |form| %>
-    <%= render 'shared/errors' %> 
+<div class="container shadow  p-3 rounded-3">
+  <%= render 'shared/errors', obj: @article %> 
+  <%= form_with(model: @article) do |form| %>
     <form>
       <div class="mb-3">
         <%= form.label :title, class: "form-label" %>
