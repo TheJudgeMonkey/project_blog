@@ -16,7 +16,7 @@
   <div class="card-footer text-muted bg-light bg-gradient">
     Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago 
     <span class="fst-italic">
-      by me
+      by <%= @article.user.username if @article.user %>
     </span>
   </div>
 </div>
