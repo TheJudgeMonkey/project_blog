@@ -18,7 +18,7 @@
         <div id="help" class="form-text">Enter your password</div>
       </div>
       <div class="actions">
-        <%= form.submit "Sign up", class: "btn btn-primary"%>
+        <%= form.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary")%>
       </div>
     </form> 
   <% end %>
