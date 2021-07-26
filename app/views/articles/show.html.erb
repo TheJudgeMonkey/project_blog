@@ -1,9 +1,10 @@
 <h1 class="text-center mt-4 text-white fw-bold" ><%= @article.title %></h1>
+
 <div class="card text-center card shadow mb-5 bg-body rounded">
   <div class="card-header bg-light bg-gradient">
     <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
     <ul class="nav nav-pills card-header-pills d-grid gap-2 d-md-flex justify-content-md-end">
-      <% if logged_in? && @article.user == current_user %>
+      <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
         <li class="nav-item">
           <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-success btn-sm" %>
         </li>
