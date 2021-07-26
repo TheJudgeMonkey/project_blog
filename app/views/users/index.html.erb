@@ -21,9 +21,11 @@
         <li class="nav-item">
           <%= link_to 'View profile', user, class: "btn btn-outline-success btn-sm" %>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Edit profile', edit_user_path(user), class: "btn btn-outline-primary btn-sm" %>
-        </li>
+        <% if logged_in? && user == current_user %>
+          <li class="nav-item">
+            <%= link_to 'Edit profile', edit_user_path(user), class: "btn btn-outline-primary btn-sm" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

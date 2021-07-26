@@ -5,12 +5,14 @@
         <li class="nav-item">
           <%= link_to 'Show', article_path(article), class: "btn btn-outline-primary btn-sm" %>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-success btn-sm" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Delete', article_path(article), class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
-        </li>
+        <% if logged_in? && article.user == current_user%>
+          <li class="nav-item">
+            <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-success btn-sm" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Delete', article_path(article), class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
+          </li>
+        <% end %>
       </ul>
     </div>
     <div class="card-body">

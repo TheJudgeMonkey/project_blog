@@ -13,24 +13,25 @@
         <li class="nav-item">
           <%= link_to "Articles", articles_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "New Article", new_article_path, class: "nav-link"%>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Account
           </a>
           <ul class="dropdown-menu bg-color" aria-labelledby="navbarDropdown">
             <% if logged_in? %>
-            <li><%= link_to "Create a new account", signup_path, class: "dropdown-item text-primary" %></li>
-              <li><hr class="dropdown-divider"></li>
               <li><%= link_to " Welcome #{current_user.username}!", user_path(current_user), class: "dropdown-item fw-bold" %></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to "Create New Article", new_article_path, class: "dropdown-item text-success"%></li>
+              <li><hr class="dropdown-divider"></li>
               <li><%= link_to "Logout", logout_path, class: "dropdown-item  text-danger", method: :delete %></li>
             <% else %>
               <li><%= link_to "Sign up", signup_path, class: "dropdown-item text-primary" %></li>
               <li><%= link_to "Log in", login_path, class: "dropdown-item text-success" %></li>
             <% end %>        
           </ul>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About", about_path, class: "nav-link"%>
         </li>
       </ul>    
       <form class="d-flex">
