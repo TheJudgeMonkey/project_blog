@@ -6,8 +6,8 @@
 
 
 <% @users.each do |user| %>
-  <div class="card text-center card shadow mb-5 bg-body rounded">
-    <div class="card-header bg-light bg-gradient">
+  <div class="card text-center card shadow mb-5 bg-color rounded">
+    <div class="card-header bg-new">
       <%= link_to user.username, user, class: "text-decoration-none text-dark fs-2" %>
     </div>
     <div class="card-body">
@@ -16,7 +16,7 @@
       </h5>
       <p class="card-text fs-5"><%= pluralize(user.articles.count, "article") %></p>
     </div>
-    <div class="card-footer text-muted fs-6 bg-light bg-gradient">
+    <div class="card-footer text-muted fs-6 bg-new">
       <ul class="nav nav-pills card-header-pills d-grid gap-2 d-md-flex justify-content-md-end">
         <li class="nav-item">
           <%= link_to 'View profile', user, class: "btn btn-outline-success btn-sm" %>
