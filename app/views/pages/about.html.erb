@@ -1,3 +1,32 @@
-<h1>This is about page</h1>
-<%= link_to 'Articles listing', articles_path %> |
-<%= link_to 'Home page', root_path %>
+<h1 class="text-center mt-4 text-white fw-bold" >About page</h1>
+
+<div class="card text-center card shadow mb-5 bg-color rounded">
+  <div class="card-header bg-new fs-4">
+    This is a project by 
+    <%= link_to "Stas Anufriev", "https://github.com/TheJudgeMonkey/project_blog", class: "text-decoration-none text-light" %> 
+    for
+    <%= link_to "iTechArt", " https://www.itechart.by", class: "text-decoration-none text-light" %>
+  </div>
+  <div class="card-body">
+    <div class="card-text text-start">
+      <h6 class="text-center fs-5">This is a project "BLOG" for iTechArt by course Udemy(Mashrur Hossain)</h6>
+      <ul class="fs-5">
+        <li>One-to-many associations</li>
+        <li>BCrypt(v.3.1.7) secure password</li>
+        <li>Bootstrap(v.5.0) styling</li>
+        <li>Ruby v.2.7.2</li>
+        <li>Rails v.6.1.4</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-footer text-muted bg-new">
+    <ul class="nav nav-pills card-header-pills d-grid gap-2 d-md-flex justify-content-md-center">
+      <li class="nav-item">
+        <%= link_to 'Articles', articles_path, class: "btn btn-outline-success btn-sm" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Home page', root_path, class: "btn btn-outline-primary btn-sm" %>
+      </li>
+    </ul>
+  </div>
+</div>

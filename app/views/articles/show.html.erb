@@ -1,7 +1,7 @@
 <h1 class="text-center mt-4 text-white fw-bold" ><%= @article.title %></h1>
 
-<div class="card text-center card shadow mb-5 bg-body rounded">
-  <div class="card-header bg-light bg-gradient">
+<div class="card text-center card shadow mb-5 bg-color rounded">
+  <div class="card-header bg-new">
     <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
     <ul class="nav nav-pills card-header-pills d-grid gap-2 d-md-flex justify-content-md-end">
       <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
@@ -17,7 +17,7 @@
   <div class="card-body">
     <div class="card-text fs-5 text-start"><%= @article.description %></div>
   </div>
-  <div class="card-footer text-muted bg-light bg-gradient">
+  <div class="card-footer text-muted bg-new">
     Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago 
     <span class="fst-italic">
       by <%= @article.user.username if @article.user %>

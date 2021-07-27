@@ -1,24 +1,14 @@
-# README
+##This is a project "BLOG" for iTechArt
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Project "BLOG" for iTechArt by course Udemy(Mashrur Hossain)
 
-Things you may want to cover:
 
-* Ruby version
+- One-to-many associations
+- BCrypt(v.3.1.7) secure password
+- Bootstrap(v.5.0) styling
+- Admin and user sessions
+- Flash notice
+- Ruby v.2.7.2
+- Rails v.6.1.4
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+View of project [HERE](https://enigmatic-ridge-41988.herokuapp.com/ "HERE")
