@@ -13,4 +13,4 @@
 - Ruby v.2.7.2
 - Rails v.6.1.4
 
-View of project [HERE](https://enigmatic-ridge-41988.herokuapp.com/ "HERE")
+Look at project [HERE](https://enigmatic-ridge-41988.herokuapp.com/ "HERE")
