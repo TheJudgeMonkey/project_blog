@@ -4,16 +4,22 @@
     <form>
       <div class="mb-3">
         <%= form.label :title, class: "form-label" %>
-        <%= form.text_field :title, class: "form-control"%>
+        <%= form.text_field :title, class: "form-control" %>
         <div id="help" class="form-text">Length must be more than 6 characters and less than 100</div>
       </div>
       <div class="mb-3">
         <%= form.label :description, class: "form-label" %>
-        <%= form.text_area :description, class: "form-control", rows: "4"%>
+        <%= form.text_area :description, class: "form-control", rows: "4" %>
         <div id="help" class="form-text">Length must be more than 10 characters and less than 500</div>
       </div>
+      <div class="mb-3">
+        <%= form.label :category, class: "form-label" %>
+        <%= form.collection_select :category_ids, Category.all, :id, :name, 
+        { prompt: "(empty)"}, { multiple: true, size: 3, class: "form-control w-50 overflow-auto"} %>
+        <div id="help" class="form-text">To select more than one press control</div>
+      </div>
       <div class="actions">
-        <%= form.submit class: "btn btn-primary"%>
+        <%= form.submit class: "btn btn-primary" %>
       </div>
     </form> 
   <% end %>

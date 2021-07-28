@@ -1,0 +1,21 @@
+<h1 class="text-center mt-4 text-white fw-bold" >Categories</h1>
+
+<div class="apple_pagination">
+  <%= will_paginate @categories, :container => false %>
+</div>
+
+<% @categories.each do |category| %>
+  <div class="card text-center card shadow mb-5 bg-color rounded">
+    <div class="card-body">
+      <h5 class="card-title fs-2" ><%= link_to category.name, category_path(category), class: "text-decoration-none text-dark" %></h5>
+      <p class="card-text fs-5"><%= pluralize(category.articles.count, "article") %></p>
+      </div>
+    <div class="card-footer text-muted fs-6 bg-new">
+      Created <%= time_ago_in_words(category.created_at) %> ago, edited <%= time_ago_in_words(category.updated_at) %> ago 
+    </div>
+  </div>
+<% end %>
+
+<div class="apple_pagination">
+  <%= will_paginate @categories, :container => false %>
+</div>
