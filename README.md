@@ -4,8 +4,10 @@
 
 
 - One-to-many associations
+- Many-to-many associations
 - BCrypt(v.3.1.7) secure password
 - Bootstrap(v.5.0) styling
+- Tests for categories
 - Admin and user sessions
 - Flash notice
 - Ruby v.2.7.2
