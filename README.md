@@ -1,6 +1,6 @@
-##This is a project "BLOG" for iTechArt
+## This is a project "BLOG" for iTechArt
 
-###Project "BLOG" for iTechArt by course Udemy(Mashrur Hossain)
+### Project "BLOG" for iTechArt by course Udemy(Mashrur Hossain)
 
 
 - One-to-many associations
